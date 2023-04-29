@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { PageNotFoundModule } from '@app/lib/not-found';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -11,8 +11,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PageNotFoundModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
