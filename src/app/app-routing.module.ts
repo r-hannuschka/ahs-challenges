@@ -5,6 +5,9 @@ const routes: Routes = [{
   path: 'dashboard',
   loadChildren: () => import('@app/page/dashboard').then((module) => module.DashboardModule),
 }, {
+  path: 'directive',
+  loadComponent: () => import('@app/page/directive').then((module) => module.DirectivePageComponent)
+}, {
   path: '',
   redirectTo: 'dashboard',
   pathMatch: 'full'

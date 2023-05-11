@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard.page';
       path: '',
       component: DashboardComponent
     }
-  ])]
+  ])],
+  exports: [RouterModule]
 })
 export class DashboardRoutingModule {}
