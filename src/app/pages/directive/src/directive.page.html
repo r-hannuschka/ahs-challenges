@@ -1,18 +1,27 @@
 <div class="container">
   <form [formGroup]="form">
-    <div class="mb-3" aria-label="notiz form">
-      <span class="form-label">
+    <div class="mb-3" aria-label="notiz form" testId="form-notiz">
+      <span class="form-label" testId="form--notiz__label">
         Notizen*
       </span>
-      <input formControlName="notiz" type="text" name="notiz" id="" class="form-control" [appMaxLength]="5" autocomplete="off" #maxLength="MaxLength">
+      <input formControlName="notiz" type="text" name="notiz" class="form-control" [appMaxLength]="5" autocomplete="off" #maxLength="MaxLength" testId="form-ctrl-notiz-input">
+      <span testId="form-ctrl-notiz-chars-left">
+        {{ maxLength.charsLeft| async }}
+      </span>
+      <span *ngIf="form.controls['notiz'].invalid" testId="form-ctrl-notiz-error">
+        field is invalid
+      </span>
     </div>
 
     <div class="mb-3" aria-label="notiz form">
       <span class="form-label">
         Kommentar
       </span>
-      <textarea formControlName="kommentar" type="text" name="kommenta" id="" class="form-control" [appMaxLength]="1000" autocomplete="off" #maxLength2="MaxLength">
+      <textarea formControlName="kommentar" type="text" name="kommentar" class="form-control" [appMaxLength]="1000" autocomplete="off" #maxLength2="MaxLength" testId="page-directive-form-kommentar">
       </textarea>
+      <span>
+        {{ maxLength2.charsLeft| async }}
+      </span>
     </div>
   </form>
 </div>

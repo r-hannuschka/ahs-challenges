@@ -1,7 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MaxLengthDirective } from '@app/lib/form'
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MaxLengthDirective } from '@app/core/form'
 import { CommonModule } from '@angular/common';
+
+//#region typings
+export interface PageFormGroup {
+  notiz: FormControl<string | null>,
+  kommentar: FormControl<string | null>
+}
+//#endregion
 
 @Component({
   selector: 'app-directive-execises',
@@ -16,10 +23,7 @@ import { CommonModule } from '@angular/common';
 })
 export class DirectivePageComponent {
 
-  form: FormGroup<{
-    notiz: FormControl<string | null>,
-    kommentar: FormControl<string | null>
-  }>
+  form: FormGroup<PageFormGroup>
 
   constructor (
     private readonly fb: FormBuilder,
