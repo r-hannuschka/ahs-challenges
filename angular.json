@@ -80,7 +80,8 @@
               "browserTarget": "ahs-challenges:build:production"
             },
             "development": {
-              "browserTarget": "ahs-challenges:build:development"
+              "browserTarget": "ahs-challenges:build:development",
+              "proxyConfig": "proxy.config.json"
             }
           },
           "defaultConfiguration": "development"

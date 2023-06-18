@@ -8,6 +8,9 @@ const routes: Routes = [{
   path: 'directive',
   loadComponent: () => import('@app/page/directive').then((module) => module.DirectivePageComponent)
 }, {
+  path: 'users',
+  loadComponent: () => import('@app/lib/users').then((module) => module.UsersListComponent)
+}, {
   path: '',
   redirectTo: 'dashboard',
   pathMatch: 'full'
