@@ -1,0 +1,27 @@
+  <form autocomplete="off" [formGroup]="addressForm">
+    <legend>Adresse</legend>
+    <div class="mb-3">
+      <label for="first-name" class="form-label">Vorname</label>
+      <input type="text" name="name" id="first-name" class="form-control" placeholder="Vorname" formControlName="firstName">
+    </div>
+
+    <div class="mb-3">
+      <label for="last-name" class="form-label">Name</label>
+      <input type="text" name="name" id="last-name" class="form-control" placeholder="Nachname" formControlName="lastName">
+    </div>
+
+    <div class="mb-3">
+      <label for="street" class="form-label">Strasse</label>
+      <input type="text" name="name" id="street" class="form-control" placeholder="Strasse" formControlName="street">
+    </div>
+
+    <div class="mb-3">
+      <label for="postalcode" class="form-label">Plz</label>
+      <input type="number" name="name" id="postalcode" class="form-control" placeholder="Plz" formControlName="postalCode">
+    </div>
+
+    <div class="mb-3">
+      <label for="city" class="form-label">Ort</label>
+      <input type="text" name="name" id="city" class="form-control" placeholder="Stadt/Ort" formControlName="city">
+    </div>
+  </form>

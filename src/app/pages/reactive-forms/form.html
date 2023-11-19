@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reactive Forms</title>
+  </head>
+  <body>
+    <!--
+      FORMGROUP ist AbstractControl
+
+      CompositorPattern
+      Chain of Responsiblity
+    -->
+    <form action="dieURLWoEsHingehenSoll" method="post">
+      <!-- personen daten -->
+
+      <!--
+        FORMGROUP
+      -->
+      <fieldset class="d-flex flex-column">
+        <legend>Allgemeine Daten</legend>
+        <label>
+          <span>Name</span>
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Nachname</span>
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Rolle</span>
+          <!-- FormCtrl -->
+          <input type="text" />
+        </label>
+      </fieldset>
+
+      <!-- adress daten -->
+      <!--
+        FORMGROUP
+      -->
+      <fieldset class="d-flex flex-column">
+        <legend>Rechnungsanschrift</legend>
+        <label>
+          <span>Strasse</span>
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Hausnummer</span>
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Postleitzahl</span>
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Ort</span>
+          <input type="text" />
+        </label>
+      </fieldset>
+
+      <!--
+        FORMGROUP
+      -->
+      <fieldset class="d-flex flex-column">
+        <legend>Lieferadresse</legend>
+        <label>
+          <span>Strasse</span>
+          <!-- FORM CONTROL -->
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Hausnummer</span>
+          <!-- FORM CONTROL -->
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Postleitzahl</span>
+          <!-- FORM CONTROL -->
+          <input type="text" />
+        </label>
+
+        <label>
+          <span>Ort</span>
+          <!-- FORM CONTROL AbstractControl -->
+          <input type="text" />
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>
