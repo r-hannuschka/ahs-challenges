@@ -1,0 +1,87 @@
+<!--
+  FORMGROUP ist AbstractControl
+
+  CompositorPattern
+  Chain of Responsiblity
+-->
+<form [formGroup]="mainForm">
+  <!-- personen daten -->
+  <app-reactive-forms-personen-form-group></app-reactive-forms-personen-form-group>
+
+  <!--
+    FORMGROUP
+  -->
+  <fieldset formGroupName="person">
+    <legend>Allgemeine Daten</legend>
+    <label>
+      <span>Name</span>
+      <input type="text" formControlName="name" />
+    </label>
+
+    <label>
+      <span>Nachname</span>
+      <input type="text" formControlName="nachname" />
+    </label>
+
+    <label>
+      <span>Email</span>
+      <!-- FormCtrl //-->
+      <input type="email" formControlName="email" />
+    </label>
+  </fieldset>
+
+  <!-- adress daten -->
+  <!--
+    FORMGROUP
+  -->
+  <fieldset formGroupName="rechnungsAdresse">
+    <legend>Rechnungsanschrift</legend>
+    <label>
+      <span>Strasse</span>
+      <input type="text" formControlName="street" />
+    </label>
+
+    <label>
+      <span>Hausnummer</span>
+      <input type="text" formControlName="hausnummer" />
+    </label>
+
+    <label>
+      <span>Postleitzahl</span>
+      <input type="text" formControlName="plz" />
+    </label>
+
+    <label>
+      <span>Ort</span>
+      <input type="text" formControlName="ort" />
+    </label>
+  </fieldset>
+
+  <!--
+    FORMGROUP
+  -->
+  <fieldset formGroupName="lieferAdresse">
+    <legend>Lieferadresse</legend>
+    <label>
+      <span>Strasse</span>
+      <input type="text" formControlName="street" />
+    </label>
+
+    <label>
+      <span>Hausnummer</span>
+      <input type="text" formControlName="hausnummer" />
+    </label>
+
+    <label>
+      <span>Postleitzahl</span>
+      <input type="text" formControlName="plz" />
+    </label>
+
+    <label>
+      <span>Ort</span>
+      <input type="text" formControlName="ort" />
+    </label>
+  </fieldset>
+</form>
+
+<button (click)="senden()">submit</button>

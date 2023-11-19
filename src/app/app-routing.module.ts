@@ -8,6 +8,12 @@ const routes: Routes = [{
   path: 'directive',
   loadComponent: () => import('@app/page/directive').then((module) => module.DirectivePageComponent)
 }, {
+  path: 'checkout',
+  loadChildren: () => import('@app/page/checkout').then((module) => module.CheckoutPageModule)
+}, {
+  path: 'reactiveforms',
+  loadChildren: () => import('@app/page/reactive-forms').then((module) => module.ReactiveFormsPageModule)
+}, {
   path: '',
   redirectTo: 'dashboard',
   pathMatch: 'full'

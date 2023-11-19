@@ -1,0 +1,25 @@
+<fieldset [formGroup]="giftForm">
+  <legend>Geschenk Optionen</legend>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" formControlName="enabled">
+    <label class="form-check-label" for="flexCheckIndeterminate">
+      Ist Geschenk
+    </label>
+  </div>
+
+  <div class="mb-3">
+    <label for="gift-recipient" class="form-label">Empfänger</label>
+    <input type="text" name="recipient" id="recipient" class="form-control" placeholder="Empfänger" formControlName="recipient">
+  </div>
+
+  <div class="mb-3">
+    <label for="gift-text" class="form-label">Grusstext</label>
+    <textarea rows="10" name="gift-text" id="gift-text" class="form-control" placeholder="Grusstext" formControlName="comment">
+    </textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="gift-from" class="form-label">Von</label>
+    <input type="text" name="gift-sender" id="gift-from" class="form-control" placeholder="Geben Sie ihren Namen ein" formControlName="from">
+  </div>
+</fieldset>
